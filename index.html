@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOMONIYON VPN</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .logo span {
+      color: #d99b00;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 35px;
+      font-size: 15px;
+    }
+
+    .status {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    .circle {
+      width: 90px;
+      height: 90px;
+      border: 3px solid #d99b00;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+    }
+
+    .status h2 {
+      margin-bottom: 8px;
+    }
+
+    .status p {
+      color: #888;
+    }
+
+    .connect {
+      width: 100%;
+      padding: 17px;
+      border: none;
+      border-radius: 14px;
+      background: #d99b00;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .connect:active {
+      transform: scale(0.98);
+    }
+
+    .info {
+      margin-top: 25px;
+      color: #666;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      SOMONIYON <span>VPN</span>
+    </div>
+
+    <div class="subtitle">
+      Интернети бехатар, махфӣ ва озод 🔐
+    </div>
+
+    <div class="status">
+      <div class="circle">🔒</div>
+
+      <h2 id="status">Disconnected</h2>
+
+      <p>Барои пайваст шудан тугмаро пахш кунед.</p>
+    </div>
+
+    <button class="connect" onclick="connectVPN()">
+      ПАЙВАСТ ШУДАН
+    </button>
+
+    <div class="info">
+      ©️ 2026 SOMONIYON VPN
+    </div>
+
+  </div>
+
+  <script>
+    function connectVPN() {
+      const status = document.getElementById("status");
+
+      status.textContent = "Connecting...";
+
+      setTimeout(() => {
+        status.textContent = "Connected ✓";
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
